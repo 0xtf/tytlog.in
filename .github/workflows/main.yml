@@ -1,3 +1,4 @@
+name: Build and deploy tytlog.in
 on:
   push:
 
