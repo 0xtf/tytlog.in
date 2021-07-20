@@ -1,0 +1,37 @@
+on:
+  push:
+
+jobs:
+  deploy:
+    name: Deploy tytlog.in
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-central-1
+    
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+     
+    - name: Install dependencies and start build
+      run: |
+        yarn install --pure-lockfile
+        yarn build
+    
+    - name: Copy files from Github to S3 except for HTML files
+      run: aws s3 cp ./build s3://tytlog.in/ --recursive --exclude ".*" --exclude "README.md"
+    
+    - name: Create invalidation on CloudFront
+      run: |
+        aws cloudfront create-invalidation --distribution-id EGZ9DERM3V9TM --paths "/*"
