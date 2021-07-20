@@ -4,13 +4,13 @@
 
 # What is it?
 
-To circumvent the limitation of te embedeed browser version not being able to log in to Youtube, we've developed tytlog.in. After using the website you'll be redirected to the Youtube app with your account already logged in.
+To circumvent the limitation of the embedeed browser version not being able to log in to Youtube, we've developed tytlog.in. After using the website you'll be redirected to the Youtube app with your account already logged in.
 
 # How does it work?
 
-Simply put, we'll authenticate you tytlog.in (which only holds an authentication prompt) with the objective of your car holding the authentication cookies. After that the Tesla Youtube app will make use of those cookies to automatically authenticate you. 
+Simply put, we'll authenticate you in tytlog.in (which doesn't have any content other than the authentication prompt) with the objective of your car holding the authentication cookies. After that the Tesla Youtube app will make use of those cookies to automatically authenticate you. 
 
-Simply visit [tytlog.in](https://tytlog.in) and authenticate with your Google account. That's it!
+Simply visit [tytlog.in](https://tytlog.in) and authenticate with your Google account. That's it! 
 
 # Security
 
