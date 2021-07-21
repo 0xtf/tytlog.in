@@ -1,24 +1,51 @@
+import React from 'react'
 import logo from './logo.svg';
-import './App.css';
+import { useAuth0 } from '@auth0/auth0-react'
+import { Container, Card, Button, Spinner } from 'react-bootstrap'
 
-function App() {
+const { Img, Body, Title, Text, Header} = Card
+
+export const App = () => {
+  const { loginWithRedirect, logout, isAuthenticated, isLoading } = useAuth0()
+
+  if(isLoading){
+    return(
+    <Container style={{ height: '100vh', backgroundColor: '#282c34', display: 'flex', justifyContent: 'center', minWidth: '100%'}}>
+      <Spinner animation='border'/>
+    </Container>)
+  }
+  
+  console.log(isAuthenticated)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container style={{ height: '100vh', backgroundColor: '#282c34', display: 'flex', justifyContent: 'center', minWidth: '100%'}}>
+      <Card border='success' style={{ width: '50%', alignSelf: 'center', height: 'fit-content'}}>
+        <Header>
+          <Img variant='top' src={logo} />
+        </Header>
+        <Body >
+          <Title>TYTLOG.IN</Title>
+          <Text>
+            tytlog.in is an open-source, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle. 
+            Login above to be redirected to your car Youtube app!
+          </Text>
+          
+          {isAuthenticated ? (
+            <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
+              <a href='https://youtube.com'><Button>Go To Youtube!! </Button></a>
+              <Button variant='primary' onClick={() => logout({returnTo: window.location.origin})}>
+              Log Out
+              </Button>
+            </div>
+          ) : (
+            <Button variant='primary' onClick={() => loginWithRedirect()}>
+              Log In to your Google account
+            </Button>
+          )
+          }
+        </Body>
+        
+      </Card>
+    </Container>
   );
 }
 
