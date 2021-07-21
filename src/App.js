@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo.svg';
+import logo from './Tlogo.svg';
 import { useAuth0 } from '@auth0/auth0-react'
 import { Container, Card, Button, Spinner } from 'react-bootstrap'
 
@@ -14,13 +14,14 @@ export const App = () => {
       <Spinner animation='border'/>
     </Container>)
   }
-  const isYTReferrer = document.referrer === "https://www.youtube.com/"
+  //const isYTReferrer = document.referrer === "https://www.youtube.com/"
   console.log(document.referrer)
+  console.log()
 
   return (
     <Container style={{ height: '100vh', backgroundColor: '#282c34', display: 'flex', justifyContent: 'center', minWidth: '100%'}}>
-      <Card style={{ width: '50%', alignSelf: 'center', height: 'fit-content', backgroundColor: '#282c34', color: '#FFFFFF', border: '0px'}}>
-        <Img variant='top' src={logo} />
+      <Card style={{ width: '65%', alignSelf: 'center', height: 'fit-content', backgroundColor: '#282c34', color: '#FFFFFF', border: '0px'}}>
+        <Img variant='top' src={logo} style={{maxWidth: '70%', alignSelf: 'center'}}/>
         <Body >
           <Text>
                 tytlog.in is an open-source, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle. 
@@ -38,18 +39,13 @@ export const App = () => {
           ):(
             <>
             <Text>
-              How to log in:
-            </Text> 
-            {isYTReferrer?(
-            <Text>
-              Second Step:<Button variant='primary' onClick={() => loginWithRedirect()} style={{ margin:'0px 10px' }}>Authenticate in your Google account</Button>
-            </Text>):
-            (<Text>
-              First Step:<a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'><Button style={{ margin:'0px 10px' }}>Open the Youtube App</Button></a> (Click "Go to site" when prompted by the Youtube App)
+              <a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'><Button style={{ marginRight:'5px' }}>First Step: Open the Youtube App</Button></a> (Click "Go to site" when prompted by the Youtube App)
             </Text>
-            )}
+            <br/>
+            <Button variant='primary' onClick={() => loginWithRedirect()}>Second step: Log in to your Google Account</Button>
             </>
           )}
+          <Text>DEBUG VALUE: {document.referrer}</Text>
         </Body>
         
       </Card>
