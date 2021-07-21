@@ -22,6 +22,10 @@ export const App = () => {
       <Card style={{ width: '50%', alignSelf: 'center', height: 'fit-content', backgroundColor: '#282c34', color: '#FFFFFF', border: '0px'}}>
         <Img variant='top' src={logo} />
         <Body >
+          <Text>
+                tytlog.in is an open-source, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle. 
+                Login above to be redirected to your car Youtube app!
+          </Text>
           {isAuthenticated? (
             <>
             <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
@@ -33,10 +37,6 @@ export const App = () => {
             </>
           ):(
             <>
-            <Text>
-              tytlog.in is an open-source, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle. 
-              Login above to be redirected to your car Youtube app!
-            </Text>
             <Text>
               How to log in:
             </Text> 
