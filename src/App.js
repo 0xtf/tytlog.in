@@ -15,8 +15,6 @@ export const App = () => {
     </Container>)
   }
   const isYTReferrer = document.referrer.includes(ALLOWED_REFERRER)
-  console.log(document.referrer)
-  console.log()
 
   return (
     <Container style={{ height: '100vh', backgroundColor: '#282c34', display: 'flex', justifyContent: 'center', minWidth: '100%'}}>
@@ -24,13 +22,12 @@ export const App = () => {
         <Img variant='top' src={logo} style={{maxWidth: '70%', alignSelf: 'center'}}/>
         <Body >
           <Text>
-                tytlog.in is an open-source, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle. 
-                Login above to be redirected to your car Youtube app!
+                tytlog.in is an <a href='https://github.com/0xtf/tytlog.in' target='_blank' rel='noreferrer'>open-source</a>, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle.
           </Text>
           {isAuthenticated? (
             <>
             <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
-              <a href='https://youtube.com'><Button>Go To Youtube!! </Button></a>
+              <a href='https://youtube.com'><Button>All done! Open YouTube! 🍿 </Button></a>
               <Button variant='primary' onClick={() => logout({returnTo: window.location.origin})}>
               Log Out
               </Button>
@@ -42,7 +39,7 @@ export const App = () => {
               <Button variant='primary' onClick={() => loginWithRedirect()}>Second step: Log in to your Google Account</Button>
             ):(
             <Text>
-              <a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'><Button style={{ marginRight:'5px' }}>First Step: Open the Youtube App</Button></a> (Click "Go to site" when prompted by the Youtube App)
+              <a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'><Button style={{ marginRight:'5px' }}>First step: Open YouTube and click on "Go to site"</Button></a>
             </Text>
             )}
             </>
