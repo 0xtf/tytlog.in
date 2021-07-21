@@ -28,7 +28,9 @@ export const App = () => {
             tytlog.in is an open-source, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle. 
             Login above to be redirected to your car Youtube app!
           </Text>
-          
+          <Text>
+            1. use the following link and then login on the redirected page <a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'>Maybe works link</a>
+          </Text>
           {isAuthenticated ? (
             <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
               <a href='https://youtube.com'><Button>Go To Youtube!! </Button></a>
