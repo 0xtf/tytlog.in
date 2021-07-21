@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import { useAuth0 } from '@auth0/auth0-react'
 import { Container, Card, Button, Spinner } from 'react-bootstrap'
 
-const { Img, Body, Title, Text, Header} = Card
+const { Img, Body, Text } = Card
 
 export const App = () => {
   const { loginWithRedirect, logout, isAuthenticated, isLoading } = useAuth0()
