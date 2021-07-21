@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './Tlogo.svg';
+import logo from './Popcorn.svg';
 import { useAuth0 } from '@auth0/auth0-react'
 import { Container, Card, Button, Spinner } from 'react-bootstrap'
 
@@ -19,7 +19,7 @@ export const App = () => {
   return (
     <Container style={{ height: '100vh', backgroundColor: '#282c34', display: 'flex', justifyContent: 'center', minWidth: '100%'}}>
       <Card style={{ width: '65%', alignSelf: 'center', height: 'fit-content', backgroundColor: '#282c34', color: '#FFFFFF', border: '0px'}}>
-        <Img variant='top' src={logo} style={{maxWidth: '70%', alignSelf: 'center'}}/>
+        <Img variant='top' src={logo} style={{maxWidth: '30%', alignSelf: 'center'}}/>
         <Body >
           <Text>
                 tytlog.in is an <a href='https://github.com/0xtf/tytlog.in' target='_blank' rel='noreferrer'>open-source</a>, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle.
