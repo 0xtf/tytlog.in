@@ -15,3 +15,7 @@ Simply visit [tytlog.in](https://tytlog.in) and authenticate with your Google ac
 # Security
 
 One of the main reasons behind this simple app was to make security and privacy a priority. We made all aspects of tytlog.in open-source so the entire community can check what's happening. 
+
+# Who did it?
+
+This is a project by [Carlos Castaneda](https://twitter.com/CMCastanedaM) and [Tiago Faria](https://twitter.com/0xtf).
