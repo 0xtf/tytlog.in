@@ -4,7 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { Container, Card, Button, Spinner } from 'react-bootstrap'
 
 const { Img, Body, Text } = Card
-
+const ALLOWED_REFERRER = "https://www.youtube.com/"
 export const App = () => {
   const { loginWithRedirect, logout, isAuthenticated, isLoading } = useAuth0()
   
@@ -14,7 +14,7 @@ export const App = () => {
       <Spinner animation='border'/>
     </Container>)
   }
-  //const isYTReferrer = document.referrer === "https://www.youtube.com/"
+  const isYTReferrer = document.referrer.includes(ALLOWED_REFERRER)
   console.log(document.referrer)
   console.log()
 
@@ -38,16 +38,16 @@ export const App = () => {
             </>
           ):(
             <>
+            { isYTReferrer ? (
+              <Button variant='primary' onClick={() => loginWithRedirect()}>Second step: Log in to your Google Account</Button>
+            ):(
             <Text>
               <a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'><Button style={{ marginRight:'5px' }}>First Step: Open the Youtube App</Button></a> (Click "Go to site" when prompted by the Youtube App)
             </Text>
-            <br/>
-            <Button variant='primary' onClick={() => loginWithRedirect()}>Second step: Log in to your Google Account</Button>
+            )}
             </>
           )}
-          <Text>DEBUG VALUE: {document.referrer}</Text>
         </Body>
-        
       </Card>
     </Container>
   );
