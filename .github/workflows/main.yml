@@ -1,7 +1,7 @@
 name: Build and deploy tytlog.in
 on:
   push:
-  paths-ignore:
+    paths-ignore:
       - '**/README.md'
 
 jobs:
