@@ -22,7 +22,7 @@ export const App = () => {
         <Img variant='top' src={logo} style={{maxWidth: '30%', alignSelf: 'center'}}/>
         <Body >
           <Text>
-                tytlog.in is an <a href='https://github.com/0xtf/tytlog.in' target='_blank' rel='noreferrer'>open-source</a>, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle.
+                tytlog.in is an <a href='https://github.com/0xtf/tytlog.in' target='_blank' rel='noreferrer'>open-source</a>, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle. Read what our users <a href='https://www.reddit.com/r/TeslaLounge/comments/ooy4tw/tytlogin_simple_and_secure_youtube_login_for_your/?sort=new' target='_blank' rel='noreferrer'>saying about us</a>.
           </Text>
           {isAuthenticated? (
             <>
