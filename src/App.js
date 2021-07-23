@@ -27,7 +27,7 @@ export const App = () => {
           {isAuthenticated? (
             <>
             <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
-              <a href='https://youtube.com'><Button>All done! Open YouTube!</Button></a>
+              <a href='https://youtube.com'><Button>All done! Click here to open YouTube!</Button></a>
               <Button variant='primary' onClick={() => logout({returnTo: window.location.origin})}>
               Log Out
               </Button>
