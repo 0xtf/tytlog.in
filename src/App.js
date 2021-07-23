@@ -39,7 +39,7 @@ export const App = () => {
               <Button variant='primary' onClick={() => loginWithRedirect()}>Second step: Almost there! Click here to login to your Google Account</Button>
             ):(
             <Text>
-              <a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'><Button style={{ marginRight:'5px' }}>First step: Click here to open YouTube and choose "Go to site" when prompted</Button></a>
+              <a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'><Button style={{ marginRight:'5px' }}>First step: Click here and choose "Go to site" when prompted</Button></a>
             </Text>
             )}
             </>
