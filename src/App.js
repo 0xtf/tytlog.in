@@ -47,7 +47,7 @@ export const App = () => {
         </Body>
       </Card>
       <Text style={{color: '#FFFFFF', position: 'absolute', bottom: '0', margin: '5px', textAlign: 'center', width: '98%', fontSize: '14px'}}>
-        <i>Read more about us in the /r/TeslaLounge <a href='https://www.reddit.com/r/TeslaLounge/comments/ooy4tw/tytlogin_simple_and_secure_youtube_login_for_your/?sort=new' target='_blank' rel='noreferrer'>announcement thread</a>.</i>
+        <i>Read more about us in the /r/TeslaLounge <a href='https://www.reddit.com/r/TeslaLounge/comments/ooy4tw/tytlogin_simple_and_secure_youtube_login_for_your/?sort=new' target='_blank' rel='noreferrer'>announcement thread</a></i>
       </Text>
     </Container>
   );
