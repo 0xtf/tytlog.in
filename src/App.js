@@ -22,7 +22,7 @@ export const App = () => {
         <Img variant='top' src={logo} style={{maxWidth: '30%', alignSelf: 'center'}}/>
         <Body >
           <Text>
-                tytlog.in is an <a href='https://github.com/0xtf/tytlog.in' target='_blank' rel='noreferrer'>open-source</a>, privacy-focused application that allows you to log in into your Youtube account from your Tesla vehicle. 
+                tytlog.in is an <a href='https://github.com/0xtf/tytlog.in' target='_blank' rel='noreferrer'>open-source</a>, privacy-focused application that allows you to log in into your Youtube account on your Tesla vehicle. Visit us using the browser of your car and click below to get started!
           </Text>
           {isAuthenticated? (
             <>
@@ -39,7 +39,7 @@ export const App = () => {
               <Button variant='primary' onClick={() => loginWithRedirect()}>Second step: Almost there! Click here to login to your Google Account</Button>
             ):(
             <Text>
-              <a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'><Button style={{ marginRight:'5px' }}>First step: Click here and choose "Go to site" when prompted</Button></a>
+              <a href='https://www.youtube.com/redirect?q=https%3A%2F%2Ftytlog.in%2F'><Button style={{ marginRight:'5px' }}>First step: Click here and choose "GO TO SITE" when prompted</Button></a>
             </Text>
             )}
             </>
