@@ -14,7 +14,7 @@ Simply visit [tytlog.in](https://tytlog.in) and authenticate with your Google ac
 
 # Security
 
-One of the main reasons behind this simple app was to make security and privacy a priority. We made all aspects of tytlog.in open-source so the entire community can check what's happening. 
+One of the main reasons behind this simple app was to make security and privacy a priority. We made all aspects of tytlog.in open-source so the entire community can check what's happening. You can also check the [Reddit announcement thread](https://www.reddit.com/r/TeslaLounge/comments/ooy4tw/tytlogin_simple_and_secure_youtube_login_for_your/) to see what users are saying about the platform (including peer reviews). 
 
 # Who did it?
 
