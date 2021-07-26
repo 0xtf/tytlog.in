@@ -20,7 +20,7 @@ export const App = () => {
       <Card style={{ width: '65%', alignSelf: 'center', height: 'fit-content', backgroundColor: '#282c34', color: '#FFFFFF', border: '0px'}}>
         <Img variant='top' src={'./mascot.png'} style={{maxWidth: '60%', alignSelf: 'center'}}/>
         <Body >
-          {!isYTReferrer && <Text>
+          {(!isYTReferrer || isAuthenticated) && <Text>
                 tytlog.in is an <a href='https://github.com/0xtf/tytlog.in' target='_blank' rel='noreferrer'>open-source</a>, privacy-focused application that allows you to log in into your Youtube account on your Tesla vehicle. Visit us using the browser in your car and click below to get started!
           </Text>}
           {isAuthenticated? (
@@ -45,7 +45,7 @@ export const App = () => {
           )}
         </Body>
       </Card>
-      {!isYTReferrer && <Text style={{color: '#FFFFFF', position: 'absolute', bottom: '0', margin: '5px', textAlign: 'center', width: '98%', fontSize: '14px'}}>
+      {(!isYTReferrer || isAuthenticated) && <Text style={{color: '#FFFFFF', position: 'absolute', bottom: '0', margin: '5px', textAlign: 'center', width: '98%', fontSize: '14px'}}>
         <i>Read more about us in the r/TeslaLounge <a href='https://www.reddit.com/r/TeslaLounge/comments/ooy4tw/tytlogin_simple_and_secure_youtube_login_for_your/?sort=new' target='_blank' rel='noreferrer'>announcement thread</a></i>
       </Text>}
     </Container>
