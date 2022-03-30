@@ -21,7 +21,7 @@ export const App = () => {
         <Img variant='top' src={'./mascot.png'} style={{maxWidth: '60%', alignSelf: 'center'}}/>
         <Body >
           {(!isYTReferrer && !isAuthenticated) && <Text>
-                tytlog.in is an <a href='https://github.com/0xtf/tytlog.in' target='_blank' rel='noreferrer'>open-source</a>, privacy-focused application that allows you to log in into your Youtube account on your Tesla vehicle. Visit us using the browser in your car and click below to get started!
+                tytlog.in is an <a href='https://github.com/0xtf/tytlog.in' target='_blank' rel='noreferrer'>open-source</a>, privacy-focused application that allows you to log in into your Youtube account in your Tesla vehicle. Visit us using the browser in your car and click below to get started!
           </Text>}
           {isAuthenticated? (
             <>
@@ -46,7 +46,7 @@ export const App = () => {
         </Body>
       </Card>
       {(!isYTReferrer && !isAuthenticated) && <Text style={{color: '#FFFFFF', position: 'absolute', bottom: '0', margin: '5px', textAlign: 'center', width: '98%', fontSize: '14px'}}>
-        <i><a href='https://www.reddit.com/r/TeslaLounge/comments/ooy4tw/tytlogin_simple_and_secure_youtube_login_for_your/?sort=new' target='_blank' rel='noreferrer'>Announcement thread</a> on r/TeslaLounge  | ✉️ tiago@xroot.org</i>
+        <i><a href='https://www.reddit.com/r/TeslaLounge/comments/ooy4tw/tytlogin_simple_and_secure_youtube_login_for_your/?sort=new' target='_blank' rel='noreferrer'>Announcement thread</a> on r/TeslaLounge ✉️ tiago@xroot.org</i>
       </Text>}
     </Container>
   );
